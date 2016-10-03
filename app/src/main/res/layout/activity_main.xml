@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lenovo.datastorage.MainActivity"
+    android:background="#BBDEFB">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Student Data"
+        android:id="@+id/studentData"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Roll No"
+        android:id="@+id/textView1"
+        android:layout_below="@+id/studentData"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CGPA"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Before Submit"
+        android:id="@+id/viewSubmit"
+        android:onClick="viewSubmitPress"
+        android:layout_above="@+id/update"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="onSubmit"
+        android:layout_toEndOf="@+id/studentData"
+        android:layout_alignBottom="@+id/viewSubmit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/update"
+        android:onClick="onUpdate"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/delete"
+        android:onClick="onDelete"
+        android:layout_alignStart="@+id/submit"
+        android:layout_below="@+id/submit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rollno"
+        android:layout_alignEnd="@+id/submit"
+        android:layout_above="@+id/name"
+        android:layout_alignStart="@+id/studentData"
+        android:layout_below="@+id/studentData" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_alignEnd="@+id/rollno"
+        android:layout_above="@+id/textView3"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_alignStart="@+id/rollno" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cgpa"
+        android:layout_alignStart="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_alignEnd="@+id/name" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write to External"
+        android:id="@+id/writeE"
+        android:onClick="writeToExternal"
+        android:layout_below="@+id/witeI"
+        android:layout_alignStart="@+id/witeI" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WRITE TO INTERNAL"
+        android:id="@+id/witeI"
+        android:onClick="writeToInternal"
+        android:layout_below="@+id/update"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
